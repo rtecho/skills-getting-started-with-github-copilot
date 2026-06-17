@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Escape dynamic text before injecting into card HTML.
   function escapeHtml(value) {
-    return value
+    const text = String(value ?? "");
+    return text
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
